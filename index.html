@@ -1,13 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>productivity</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+
+        <h1>📝 My To-Do List</h1>
+
+        <p id="date"></p>
+
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search Task...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+    </header>
+
+    <div class="add-task">
+
+        <input
+        type="text"
+        id="taskInput"
+        placeholder="Enter your task">
+
+        <select id="priority">
+
+            <option value="High">🔴 High</option>
+
+            <option value="Medium">
+                🟡 Medium
+            </option>
+
+            <option value="Low">
+                🟢 Low
+            </option>
+
+        </select>
+
+        <input type="date" id="dueDate">
+
+        <button id="addBtn">
+
+            <i class="fa-solid fa-plus"></i>
+
+            Add
+
+        </button>
+
+    </div>
+
+
+    <div class="progress-container">
+
+        <div class="progress-info">
+
+            <span>Progress</span>
+
+            <span id="progressText">0%</span>
+
+        </div>
+
+        <div class="progress-bar">
+
+            <div id="progress"></div>
+
+        </div>
+
+    </div>
+
+
+    <div class="counter">
+
+        <div class="box">
+
+            <h3 id="pendingCount">0</h3>
+
+            <p>Pending</p>
+
+        </div>
+
+        <div class="box">
+
+            <h3 id="completedCount">0</h3>
+
+            <p>Completed</p>
+
+        </div>
+
+        <div class="box">
+
+            <h3 id="totalCount">0</h3>
+
+            <p>Total</p>
+
+        </div>
+
+    </div>
+
+
+    <ul id="taskList">
+
+    </ul>
+
+
+    <footer>
+
+        <button id="themeBtn">
+
+            🌙 Dark Mode
+
+        </button>
+
+        <p class="quote">
+
+            "Small progress is still progress 🌱"
+
+        </p>
+
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
 </html>
