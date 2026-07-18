@@ -1,0 +1,178 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#d8d8d8;
+}
+
+.container{
+    position:relative;
+    width:340px;
+    height:680px;
+    border-radius:35px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+    /* YOUR IMAGE */
+    background-image:
+    linear-gradient(rgba(119, 74, 116, 0.75),rgba(255,190,0,.75)),
+    url("food.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* White Rings */
+
+.circle{
+    position:absolute;
+    border:3px solid rgba(255,255,255,.8);
+    border-radius:50%;
+}
+
+.circle1{
+    width:260px;
+    height:260px;
+    top:-90px;
+    left:-90px;
+}
+
+.circle2{
+    width:200px;
+    height:200px;
+    right:-100px;
+    bottom:190px;
+}
+
+.circle3{
+    width:180px;
+    height:180px;
+    right:-70px;
+    bottom:120px;
+}
+
+/* White Dots */
+
+.dot{
+    position:absolute;
+    width:12px;
+    height:12px;
+    background:white;
+    border-radius:50%;
+}
+
+.dot1{
+    top:90px;
+    left:65px;
+}
+
+.dot2{
+    top:240px;
+    right:70px;
+}
+
+.dot3{
+    top:430px;
+    left:120px;
+}
+
+/* Hide image because background is used */
+
+.food{
+    display:none;
+}
+
+/* Bottom Card */
+
+.bottom-card{
+
+    position:absolute;
+    bottom:0;
+
+    width:100%;
+
+    background:white;
+
+    border-radius:40px 40px 0 0;
+
+    padding:30px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 -5px 20px rgba(0,0,0,.15);
+}
+.bottom-card{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background:#fff;
+    border-radius:35px 35px 0 0;
+    padding:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+.text{
+    display:flex;
+    flex-direction:column;
+}
+
+.text h1{
+    margin:0;
+    font-size:30px;
+    color:#333;
+}
+
+.text p{
+    margin-top:5px;
+    font-size:16px;
+    color:#666;
+}
+
+#nextBtn{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    border:none;
+    background:#f8b400;
+    color:#fff;
+    font-size:28px;
+    cursor:pointer;
+}
+
+button{
+
+    width:75px;
+    height:75px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#FDB813;
+
+    color:white;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:scale(1.1);
+}
