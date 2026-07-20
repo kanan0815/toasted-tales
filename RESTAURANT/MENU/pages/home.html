@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Restaurant</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/home.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="phone">
+
+        <!-- Header -->
+        <header class="header">
+
+            <h1 class="logo" data-translate="restaurantName">
+                Toasted tales
+            </h1>
+
+            <select id="languageSelect" aria-label="Select language">
+                <option value="EN">English</option>
+                <option value="HI">Hindi</option>
+                <option value="FR">French</option>
+                <option value="KO">Korean</option>
+            </select>
+
+        </header>
+
+        <!-- Banner -->
+        <section class="banner">
+
+            <div class="banner-text">
+                <h2 data-translate="bannerTitle">
+                    EAT LIKE A <br> CHAMPION
+                </h2>
+
+                <p data-translate="bannerSubtitle">
+                    Healthy & Fresh Food
+                </p>
+            </div>
+
+            <div class="banner-image">
+                <img src="../images/banner.jpg" alt="Food">
+            </div>
+
+        </section>
+
+        <!-- Categories -->
+        <section class="categories">
+
+            <div class="card">
+                <i class="fa-solid fa-utensils"></i>
+                <h3 data-translate="starter">Starter</h3>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-mug-hot"></i>
+                <h3 data-translate="beverages">Beverages</h3>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-drumstick-bite"></i>
+                <h3 data-translate="mainCourse">Main Course</h3>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-ice-cream"></i>
+                <h3 data-translate="dessert">Dessert</h3>
+            </div>
+
+        </section>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+
+            <a href="../home.html" class="nav-item active">
+                <i class="fa-solid fa-house"></i>
+                <span data-translate="home">Home</span>
+            </a>
+
+            <a href="favourites.html" class="nav-item">
+                <i class="fa-regular fa-heart"></i>
+                <span data-translate="favourite">Favourite</span>
+            </a>
+
+            <a href="cart.html" class="nav-item">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span data-translate="cart">Cart</span>
+            </a>
+
+            <a href="profile.html" class="nav-item">
+                <i class="fa-regular fa-user"></i>
+                <span data-translate="profile">Profile</span>
+            </a>
+
+
+        </nav>
+
+    </div>
+
+    <script src="../js/translations.js"></script>
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

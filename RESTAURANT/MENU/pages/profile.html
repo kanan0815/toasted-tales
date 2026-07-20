@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- JavaScript -->
+    <script src="../js/translations.js" defer></script>
+    <script src="../js/script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="phone">
+
+        <main>
+            <!-- Update this section -->
+            <div class="header-row">
+                <header>
+                    <h2 class="section-title">My Profile</h2>
+                </header>
+
+                <!-- Edit Button -->
+                <button id="editProfileBtn" class="btn-search" aria-label="Edit Profile">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+            </div>
+
+            <!-- Profile Card -->
+            <section class="profile-header-card">
+
+                <div class="avatar-wrapper">
+                    <div class="avatar-emoji">
+                        👤
+                    </div>
+                </div>
+
+                <h2 class="user-display-name">
+                    Your Name
+                </h2>
+
+                <p class="user-display-email">
+                    Email not added
+                </p>
+
+                <p class="user-phone">
+                    Phone not added
+                </p>
+
+                <p class="user-address">
+                    Address not added
+                </p>
+            </section>
+
+            <!-- Menu -->
+            <a href="address.html" class="profile-link">
+                <div class="profile-menu-item">
+
+                    <div class="menu-item-left">
+                        <div class="menu-item-icon">📍</div>
+
+                        <div class="menu-item-text">
+                            <h3>Delivery Address</h3>
+                            <p>Manage your saved locations</p>
+                        </div>
+                    </div>
+
+                    <i class="fa-solid fa-angle-right menu-item-arrow"></i>
+
+                </div>
+            </a>
+
+            <!--Payment methods-->
+
+            <a href="payment.html" class="profile-link">
+                <div class="profile-menu-item">
+                    <div class="menu-item-left">
+                        <div class="menu-item-icon">
+                            💳
+                        </div>
+                        <div class="menu-item-text">
+                            <h3>
+                                Payment Methods
+                            </h3>
+                            <p>
+                                Visa, MasterCard, UPI
+                            </p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-angle-right menu-item-arrow"></i>
+                </div>
+            </a>
+            <!-- Order History -->
+
+            <a href="order-history.html" class="profile-menu-item order-history-link">
+                <div class="menu-item-left">
+                    <div class="menu-item-icon">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+                    <div class="menu-item-text">
+                        <h3>
+                            Order History
+                        </h3>
+                        <p>
+                            View your previous orders
+                        </p>
+                    </div>
+                </div>
+
+
+                <i class="fa-solid fa-angle-right menu-item-arrow"></i>
+
+
+            </a>
+
+            <!-- Logout -->
+            <a href="../index.html" class="logout-btn">
+                Log Out
+            </a>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav>
+
+            <a href="../pages/home.html" class="nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="favourites.html" class="nav-item">
+                <i class="fa-solid fa-heart"></i>
+                <span>Favourite</span>
+            </a>
+
+            <a href="cart.html" class="nav-item">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+            </a>
+            <a href="profile.html" class="nav-item active">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+
+
+
+        </nav>
+
+    </div>
+
+    <!-- ================= Edit Profile Modal ================= -->
+    <div id="profileModal" class="profile-modal">
+        <div class="profile-modal-content">
+            <span class="close-profile">&times;</span>
+            <h2>Edit Profile</h2>
+            <div class="profile-input-group">
+                <label>Name</label>
+                <input type="text" id="editName" placeholder="Enter your name">
+            </div>
+
+            <div class="profile-input-group">
+                <label>Email</label>
+                <input type="email" id="editEmail" placeholder="Enter your email">
+            </div>
+
+            <div class="profile-input-group">
+                <label>Phone</label>
+                <input type="text" id="editPhone" placeholder="Enter phone number">
+            </div>
+
+            <div class="profile-input-group">
+                <label>Address</label>
+                <textarea id="editAddress" rows="3" placeholder="Enter address"></textarea>
+            </div>
+
+            <button id="saveProfile" class="save-profile-btn">
+                Save Changes
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
