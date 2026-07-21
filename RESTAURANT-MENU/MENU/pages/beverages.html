@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-translate="beverages">
+        Beverages
+    </title>
+
+
+    <link rel="stylesheet" href="../css/beverages.css">
+
+
+    <!-- Translation -->
+    <script src="../js/translations.js" defer></script>
+    <script src="../js/script.js" defer></script>
+
+</head>
+
+
+<body>
+
+
+    <div class="phone">
+
+
+        <header>
+
+            <button onclick="goBack()">←</button>
+
+            <h2 data-translate="beverages">
+                Beverages
+            </h2>
+
+        </header>
+
+
+
+
+
+        <div class="container">
+
+
+
+            <!-- Hot Coffee -->
+
+            <div class="card">
+
+                <img src="../images/hot coffee.jpg" alt="Hot Coffee">
+
+
+                <h3 data-translate="hotCoffee">
+                    Hot Coffee
+                </h3>
+
+
+                <p class="price" data-price="120"></p>
+
+
+                <button class="fav-btn" onclick="addFavourite('hotCoffee',120,'../images/hot coffee.jpg')">
+
+                    ❤️
+
+                </button>
+
+
+                <button class="add-btn" data-translate="add"
+                    onclick="addDrink('hotCoffee',120,'../images/hot coffee.jpg')">
+
+                    Add
+
+                </button>
+
+
+            </div>
+
+            <!-- Cold Coffee -->
+
+            <div class="card">
+
+                <img src="../images/cold coffee.jpg" alt="Cold Coffee">
+
+
+                <h3 data-translate="coldCoffee">
+                    Cold Coffee
+                </h3>
+
+
+                <p class="price" data-price="180"></p>
+
+
+                <button class="fav-btn" onclick="addFavourite('coldCoffee',180,'../images/cold coffee.jpg')">
+
+                    ❤️
+
+                </button>
+
+
+                <button class="add-btn" data-translate="add"
+                    onclick="addDrink('coldCoffee',180,'../images/cold coffee.jpg')">
+
+                    Add
+
+                </button>
+
+
+            </div>
+
+            <!-- Cappuccino -->
+
+            <div class="card">
+
+                <img src="../images/cappuccino.jpg" alt="Cappuccino">
+
+
+                <h3 data-translate="cappuccino">
+                    Cappuccino
+                </h3>
+
+
+                <p class="price" data-price="170"></p>
+
+
+                <button class="fav-btn" onclick="addFavourite('cappuccino',170,'../images/cappuccino.jpg')">
+
+                    ❤️
+
+                </button>
+
+
+                <button class="add-btn" data-translate="add"
+                    onclick="addDrink('cappuccino',170,'../images/cappuccino.jpg')">
+
+                    Add
+
+                </button>
+
+
+            </div>
+
+            <!-- Mojito -->
+
+            <div class="card">
+                <img src="../images/mojito.webp" alt="Mojito">
+                <h3 data-translate="mojito">
+                    Mojito
+                </h3>
+                <p class="price" data-price="150"></p>
+                <button class="fav-btn" onclick="addFavourite('mojito',150,'../images/mojito.webp')">
+                    ❤️
+                </button>
+
+                <button class="add-btn" data-translate="add" onclick="addDrink('mojito',150,'../images/mojito.webp')">
+                    Add
+                </button>
+
+
+            </div>
+            <!-- Orange Juice -->
+
+            <div class="card">
+
+                <img src="../images/orange juice.png" alt="Orange Juice">
+
+
+                <h3 data-translate="orangeJuice">
+                    Orange Juice
+                </h3>
+
+
+                <p class="price" data-price="140"></p>
+
+
+                <button class="fav-btn" onclick="addFavourite('orangeJuice',140,'../images/orange juice.png')">
+
+                    ❤️
+
+                </button>
+
+
+                <button class="add-btn" data-translate="add"
+                    onclick="addDrink('orangeJuice',140,'../images/orange juice.png')">
+
+                    Add
+
+                </button>
+
+
+            </div>
+
+            <!-- Chocolate Milkshake -->
+
+            <div class="card">
+
+                <img src="../images/chocolate milkshake.jpg" alt="Chocolate Milkshake">
+
+
+                <h3 data-translate="milkshake">
+                    Chocolate Milkshake
+                </h3>
+
+
+                <p class="price" data-price="190"></p>
+
+                <button class="fav-btn"
+                    onclick="addFavourite('chocolateMilkshake',190,'../images/chocolate milkshake.jpg')">
+
+                    ❤️
+
+                </button>
+
+
+                <button class="add-btn" data-translate="add"
+                    onclick="addDrink('chocolateMilkshake',190,'../images/chocolate milkshake.jpg')">
+
+                    Add
+
+                </button>
+
+
+            </div>
+
+            <!-- Green Tea -->
+                <div class="card">
+
+                    <img src="../images/Green tea.jpg" alt="Green Tea">
+
+                    <h3 data-translate="greenTea">
+                        Green Tea
+                    </h3>
+
+                    <p class="price" data-price="90"></p>
+
+                    <button class="fav-btn" onclick="addFavourite('greenTea',90,'../images/Green tea.jpg')">
+                        ❤️
+                    </button>
+
+                    <button class="add-btn" data-translate="add"
+                        onclick="addDrink('greenTea',90,'../images/Green tea.jpg')">
+                        Add
+                    </button>
+
+                </div>
+
+                <!-- Fresh Lemonade -->
+                <div class="card">
+
+                    <img src="../images/fresh lemonade.jpg" alt="Fresh Lemonade">
+
+                    <h3 data-translate="lemonade">
+                        Fresh Lemonade
+                    </h3>
+
+                    <p class="price" data-price="100"></p>
+
+                    <button class="fav-btn" onclick="addFavourite('freshLemonade',100,'../images/fresh lemonade.jpg')">
+                        ❤️
+                    </button>
+
+                    <button class="add-btn" data-translate="add"
+                        onclick="addDrink('freshLemonade',100,'../images/fresh lemonade.jpg')">
+                        Add
+                    </button>
+
+                </div>
+
+        </div>
+
+        <script src="../js/favourite.js"></script>
+        <script src="../js/beverages.js"></script>
+
+</body>
+
+</html>

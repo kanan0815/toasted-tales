@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-translate="paymentMethods">
+        Payment Methods - Toasted Tales
+    </title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/payment.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="phone">
+
+        <!-- Header -->
+        <header class="page-header">
+
+            <a href="profile.html" class="back-btn" aria-label="Go Back">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+
+            <h2 class="section-title" data-translate="paymentMethods">
+                Payment Methods
+            </h2>
+
+        </header>
+
+        <!-- Main -->
+        <main class="payment-main">
+            <form id="paymentForm">
+
+                <!-- CARD -->
+                <div class="payment-card">
+                    <div class="payment-left">
+                        <div class="payment-icon">
+                            💳
+                        </div>
+                        <div>
+                            <h3 data-translate="creditDebitCard">
+                                Credit / Debit Card
+                            </h3>
+                            <p data-translate="cardSupport">
+                                Visa, MasterCard, RuPay
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <input type="radio" id="cardRadio" name="payment" value="card" aria-label="Credit or Debit Card">
+
+                </div>
+
+                <div class="payment-details" id="cardDetails">
+
+                    <label for="cardNumber" data-translate="cardNumber">
+                        Card Number
+                    </label>
+
+                    <input type="text" id="cardNumber" name="cardNumber" data-translate="cardNumberPlaceholder"
+                        placeholder="1234 5678 9012 3456" maxlength="19" autocomplete="cc-number">
+
+                    <label for="cardHolder" data-translate="cardHolder">
+                        Card Holder Name
+                    </label>
+
+                    <input type="text" id="cardHolder" name="cardHolder" data-translate="cardHolderPlaceholder"
+                        placeholder="Enter Card Holder Name" autocomplete="cc-name">
+
+                    <div class="payment-row">
+
+                        <div>
+
+                            <label for="expiry" data-translate="expiry">
+                                Expiry
+                            </label>
+
+                            <input type="text" id="expiry" name="expiry" data-translate="expiryPlaceholder"
+                                placeholder="MM/YY" maxlength="5" autocomplete="cc-exp">
+
+                        </div>
+
+                        <div>
+
+                            <label for="cvv" data-translate="cvv">
+                                CVV
+                            </label>
+
+                            <input type="password" id="cvv" name="cvv" data-translate="cvvPlaceholder" placeholder="123"
+                                maxlength="3" autocomplete="cc-csc">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- UPI -->
+                <div class="payment-card">
+
+                    <div class="payment-left">
+
+                        <div class="payment-icon">
+                            📱
+                        </div>
+
+                        <div>
+
+                            <h3 data-translate="upi">
+                                UPI
+                            </h3>
+
+                            <p data-translate="upiSupport">
+                                Google Pay, PhonePe, Paytm
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <input type="radio" id="upiRadio" name="payment" value="upi" aria-label="Upi Payment">
+
+                </div>
+
+                <div class="payment-details" id="upiDetails">
+
+                    <label for="upiId" data-translate="upiId">
+                        UPI ID
+                    </label>
+
+                    <input type="text" id="upiId" name="upiId" data-translate="upiPlaceholder" placeholder="example@upi"
+                        autocomplete="off">
+
+                </div>
+
+                <!-- CASH -->
+                <div class="payment-card">
+
+                    <div class="payment-left">
+
+                        <div class="payment-icon">
+                            💵
+                        </div>
+
+                        <div>
+
+                            <h3 data-translate="cashOnDelivery">
+                                Cash on Delivery
+                            </h3>
+
+                            <p data-translate="payDelivery">
+                                Pay when order is delivered
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <input type="radio" id="cashRadio" name="payment" value="cash" aria-label="Cash on Delivery">
+
+                </div>
+
+                <!-- BANK -->
+                <div class="payment-card">
+
+                    <div class="payment-left">
+
+                        <div class="payment-icon">
+                            🏦
+                        </div>
+
+                        <div>
+
+                            <h3 data-translate="netBanking">
+                                Net Banking
+                            </h3>
+
+                            <p data-translate="allBanks">
+                                All Major Banks Supported
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <input type="radio" id="bankRadio" name="payment" value="bank" aria-label="Net Banking">
+
+                </div>
+
+                <div class="payment-details" id="bankDetails">
+
+                    <label for="bank" data-translate="selectBank">
+                        Select Your Bank
+                    </label>
+
+                    <select id="bank" name="bank">
+
+                        <option value="" data-translate="selectBankOption">
+                            -- Select Bank --
+                        </option>
+
+                        <option value="SBI" data-translate="sbi">
+                            State Bank of India
+                        </option>
+
+                        <option value="HDFC" data-translate="hdfc">
+                            HDFC Bank
+                        </option>
+
+                        <option value="ICICI" data-translate="icici">
+                            ICICI Bank
+                        </option>
+
+                        <option value="AXIS" data-translate="axis">
+                            Axis Bank
+                        </option>
+
+                        <option value="PNB" data-translate="pnb">
+                            Punjab National Bank
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- Submit -->
+
+                <button type="submit" id="payBtn" class="pay-btn" data-translate="proceedPay">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    Proceed to Pay
+
+                </button>
+
+            </form>
+
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav>
+
+            <a href="../pages/home.html" class="nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span data-translate="home">Home</span>
+            </a>
+
+            <a href="favourites.html" class="nav-item">
+                <i class="fa-solid fa-heart"></i>
+                <span data-translate="favourite">Favourite</span>
+            </a>
+
+            <a href="cart.html" class="nav-item">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span data-translate="cart">Cart</span>
+            </a>
+
+            <a href="profile.html" class="nav-item active">
+                <i class="fa-solid fa-user"></i>
+                <span data-translate="profile">Profile</span>
+            </a>
+
+        </nav>
+
+    </div>
+
+    <script src="../js/translations.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/payment.js"></script>
+
+</body>
+
+</html>

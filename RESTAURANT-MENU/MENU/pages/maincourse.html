@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="mainCourse">
+        Main Course
+    </title>
+
+    <link rel="stylesheet" href="../css/maincourse.css">
+</head>
+
+<body>
+
+    <div class="phone">
+
+        <header>
+            <button onclick="goBack()">←</button>
+            <h2 data-translate="mainCourse">
+                Main Course
+            </h2>
+        </header>
+
+        <div class="container">
+
+            <div class="card">
+                <img src="../images/Paneer butter masala.jpg" alt="Paneer Butter Masala">
+                <h3 data-translate="paneerButterMasala">
+                    Paneer Butter Masala
+                </h3>
+                <p class="price" data-price="280"></p>
+                <button class="fav-btn"
+                    onclick="addFavourite('paneerButterMasala',280,'../images/Paneer butter masala.jpg')">
+                    ❤️
+                </button>
+                <button class="add-btn" data-translate="add"
+                    onclick="addFood('paneerButterMasala',280,'../images/Paneer butter masala.jpg')">
+                    Add
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="../images/shahi paneer.jpg" alt="Shahi Paneer">
+                <h3 data-translate="shahiPaneer">
+                    Shahi Paneer
+                </h3>
+                <p class="price" data-price="260"></p>
+                <button class="fav-btn" onclick="addFavourite('shahiPaneer',260,'../images/shahi paneer.jpg')">
+                    ❤️
+                </button>
+                <button class="add-btn" data-translate="add"
+                    onclick="addFood('shahiPaneer',260,'../images/shahi paneer.jpg')">
+                    Add
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="../images/dal makhani.jpg" alt="Dal Makhani">
+                <h3 data-translate="dalMakhani">
+                    Dal Makhani
+                </h3>
+                <p class="price" data-price="220"></p>
+                <button class="fav-btn" onclick="addFavourite('dalMakhani',220,'../images/dal makhani.jpg')">
+                    ❤️
+                </button>
+                <button class="add-btn" data-translate="add"
+                    onclick="addFood('dalMakhani',220,'../images/dal makhani.jpg')">
+                    Add
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="../images/veg biryani.jpg" alt="Veg Biryani">
+                <h3 data-translate="vegBiryani">
+                    Veg Biryani
+                </h3>
+                <p class="price" data-price="250"></p>
+                <button class="fav-btn" onclick="addFavourite('vegBiryani',250,'../images/veg biryani.jpg')">
+                    ❤️
+                </button>
+                <button class="add-btn" data-translate="add"
+                    onclick="addFood('vegBiryani',250,'../images/veg biryani.jpg')">
+                    Add
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="../images/jeera rice.jpg" alt="Jeera Rice">
+                <h3 data-translate="jeeraRice">
+                    Jeera Rice
+                </h3>
+                <p class="price" data-price="160"></p>
+                <button class="fav-btn" onclick="addFavourite('jeeraRice',160,'../images/jeera rice.jpg')">
+                    ❤️
+                </button>
+                <button class="add-btn" data-translate="add"
+                    onclick="addFood('jeeraRice',160,'../images/jeera rice.jpg')">
+                    Add
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="../images/butter naan.jpg" alt="Butter Naan">
+                <h3 data-translate="butterNaan">
+                    Butter Naan
+                </h3>
+                <p class="price" data-price="50"></p>
+                <button class="fav-btn" onclick="addFavourite('butterNaan',50,'../images/butter naan.jpg')">
+                    ❤️
+                </button>
+                <button class="add-btn" data-translate="add"
+                    onclick="addFood('butterNaan',50,'../images/butter naan.jpg')">
+                    Add
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="../images/mix veg.jpg" alt="Mix Veg">
+                <h3 data-translate="mixVeg">
+                    Mix Veg
+                </h3>
+                <p class="price" data-price="210"></p>
+                <button class="fav-btn" onclick="addFavourite('mixVeg',210,'../images/mix veg.jpg')">
+                    ❤️
+                </button>
+                <button class="add-btn" data-translate="add" onclick="addFood('mixVeg',210,'../images/mix veg.jpg')">
+                    Add
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="../images/chole bhature.jpg" alt="Chole Bhature">
+                <h3 data-translate="choleBhature">
+                    Chole Bhature
+                </h3>
+                <p class="price" data-price="180"></p>
+                <button class="fav-btn" onclick="addFavourite('choleBhature',180,'../images/chole bhature.jpg')">
+                    ❤️
+                </button>
+                <button class="add-btn" data-translate="add"
+                    onclick="addFood('choleBhature',180,'../images/chole bhature.jpg')">
+                    Add
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+    <script src="../js/translations.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/favourite.js"></script>
+    <script src="../js/maincourse.js"></script>
+
+</body>
+
+</html>

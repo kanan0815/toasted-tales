@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-translate="myCart">
+        My Cart
+    </title>
+
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- JavaScript -->
+    <script src="../js/translations.js" defer></script>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/cart.js" defer></script>
+
+
+</head>
+
+
+<body>
+
+
+    <div class="phone">
+
+
+        <main>
+
+
+            <!-- Header -->
+
+            <div class="header-row">
+
+
+                <header class="page-header">
+
+
+                    <a href="home.html" class="back-btn" aria-label="Go back">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                    </a>
+
+                    <h2 class="section-title" data-translate="myCart">
+                        My Cart
+                    </h2>
+
+                </header>
+
+
+
+                <div class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cartCount">0</span>
+                </div>
+            </div>
+
+            <!-- Cart Items -->
+
+            <div id="cartItems">
+
+            </div>
+
+
+
+
+
+            <!-- Empty Cart -->
+
+            <div class="empty-cart" id="emptyCart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h2 data-translate="yourCartEmpty">
+                    Your Cart is Empty
+                </h2>
+
+                <p data-translate="addDeliciousFood">
+                    Add delicious food from the menu.
+                </p>
+            </div>
+
+            <!-- Promo -->
+
+
+            <section class="promo">
+                <h3 data-translate="promoCode">
+                    Promo Code
+                </h3>
+
+                <div class="promo-box">
+                    <input type="text" id="promoCode" data-translate="couponPlaceholder" placeholder="Enter Coupon">
+
+
+
+                    <button id="applyPromo" data-translate="apply">
+
+                        Apply
+
+                    </button>
+
+
+
+                </div>
+
+
+            </section>
+
+
+
+
+
+
+
+            <!-- Bill -->
+
+
+            <section class="bill">
+
+
+                <h3 data-translate="billDetails">
+
+                    Bill Details
+
+                </h3>
+
+
+
+                <div class="row">
+
+                    <span data-translate="subtotal">
+                        Subtotal
+                    </span>
+
+                    <span id="subtotal">
+                        ₹0
+                    </span>
+
+                </div>
+
+
+
+
+
+                <div class="row">
+
+                    <span data-translate="deliveryCharge">
+                        Delivery Charge
+                    </span>
+
+
+                    <span id="delivery">
+                        ₹40
+                    </span>
+
+
+                </div>
+
+
+
+
+
+                <div class="row">
+
+
+                    <span data-translate="gst">
+                        GST (5%)
+                    </span>
+
+
+                    <span id="gst">
+                        ₹0
+                    </span>
+
+
+                </div>
+
+
+
+
+
+                <div class="row">
+
+
+                    <span data-translate="discount">
+                        Discount
+                    </span>
+
+
+                    <span id="discount">
+                        ₹0
+                    </span>
+
+
+                </div>
+
+
+
+
+                <hr>
+
+
+
+
+
+                <div class="row total">
+
+
+                    <span data-translate="total">
+                        Total
+                    </span>
+
+
+                    <span id="grandTotal">
+                        ₹0
+                    </span>
+
+
+
+                </div>
+
+
+
+            </section>
+
+
+
+
+
+
+
+
+            <!-- Checkout -->
+
+
+            <div class="checkout">
+
+
+                <button id="placeOrder">
+
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+
+                    <span data-translate="placeOrder">
+                        Place Order
+                    </span>
+
+
+
+                </button>
+
+
+
+            </div>
+
+
+
+
+        </main>
+
+
+
+
+
+
+
+        <!-- Bottom Navigation -->
+
+
+        <nav>
+
+
+            <a href="../pages/home.html" class="nav-item">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span data-translate="home">
+                    Home
+                </span>
+
+            </a>
+
+
+
+
+
+            <a href="favourites.html" class="nav-item">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <span data-translate="favourite">
+                    Favourite
+                </span>
+
+            </a>
+
+
+
+
+
+            <a href="cart.html" class="nav-item active">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span data-translate="cart">
+                    Cart
+                </span>
+
+            </a>
+
+
+
+
+
+            <a href="profile.html" class="nav-item">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span data-translate="profile">
+                    Profile
+                </span>
+
+            </a>
+
+
+
+        </nav>
+
+
+
+    </div>
+
+</body>
+
+</html>

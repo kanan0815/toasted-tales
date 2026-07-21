@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feedback - Toasted Tales</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/feedback.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="phone">
+
+
+        <!-- Header -->
+
+        <header class="page-header">
+
+            <a href="profile.html" class="back-btn" aria-label="Back">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+            </a>
+
+
+            <h2 class="section-title" data-translate="feedback">
+                Feedback
+            </h2>
+
+
+        </header>
+
+
+
+        <main class="feedback-main">
+
+
+            <div class="feedback-card">
+
+
+                <h1 data-translate="shareExperience">
+                    Share Your Experience ❤️
+                </h1>
+
+                <p data-translate="improve">
+                    Help us improve Toasted Tales
+                </p>
+
+                <form id="feedbackForm">
+
+
+                    <!-- Name -->
+
+                    <div class="inputBox">
+
+                        <label data-translate="name">
+                            Name
+                        </label>
+
+                        <input type="text" id="feedbackName" name="feedbackName" placeholder="Your Name"
+                            data-translate="yourNamePlaceholder" required>
+
+                    </div>
+
+
+
+                    <!-- Email -->
+
+                    <div class="inputBox">
+
+                        <label data-translate="email">
+                            Email
+                        </label>
+
+                        <input placeholder="Your Email (Optional)" data-translate="emailPlaceholder">
+
+                    </div>
+                    <h3 data-translate="overallRating">
+                        Overall Rating
+                    </h3>
+
+                    <div class="rating">
+
+                        <input type="radio" name="rating" id="rating5" value="5" aria-label="5 star rating">
+
+                        <label for="rating5">
+                            <i class="fa-solid fa-star"></i>
+                        </label>
+
+
+                        <input type="radio" name="rating" id="rating4" value="4" aria-label="4 star rating">
+
+                        <label for="rating4">
+                            <i class="fa-solid fa-star"></i>
+                        </label>
+
+
+                        <input type="radio" name="rating" id="rating3" value="3" aria-label="3 star rating">
+
+                        <label for="rating3">
+                            <i class="fa-solid fa-star"></i>
+                        </label>
+
+
+                        <input type="radio" name="rating" id="rating2" value="2" aria-label="2 star rating">
+
+                        <label for="rating2">
+                            <i class="fa-solid fa-star"></i>
+                        </label>
+
+
+                        <input type="radio" name="rating" id="rating1" value="1" aria-label="1 star rating">
+
+                        <label for="rating1">
+                            <i class="fa-solid fa-star"></i>
+                        </label>
+
+
+                    </div>
+
+                    <!-- Food Quality -->
+                    <div class="selectBox">
+
+                        <label data-translate="foodQuality">
+                            Food Quality
+                        </label>
+
+                        <select id="foodQuality" aria-label="Quality">
+                            <option data-translate="excellent">
+                                ⭐⭐⭐⭐⭐ Excellent
+                            </option>
+
+                            <option data-translate="good">
+                                ⭐⭐⭐⭐ Good
+                            </option>
+
+                            <option data-translate="average">
+                                ⭐⭐⭐ Average
+                            </option>
+
+                            <option data-translate="poor">
+                                ⭐⭐ Poor
+                            </option>
+
+                            <option data-translate="veryPoor">
+                                ⭐ Very Poor
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <!-- Service -->
+                    <div class="selectBox">
+                        <label data-translate="service">
+                            Service
+                        </label>
+
+                        <select id="service" aria-label="Service">
+                            <option data-translate="excellent">Excellent</option>
+                            <option data-translate="good">Good</option>
+                            <option data-translate="average">Average</option>
+                            <option data-translate="poor">Poor</option>
+                        </select>
+
+                    </div>
+
+                    <!-- Visit Again -->
+                    <div class="selectBox">
+                        <label data-translate="visitAgain">
+                            Would you visit again?
+                        </label>
+
+                        <select id="visitAgain" aria-label="Visit">
+                            <option data-translate="yes">Yes</option>
+                            <option data-translate="maybe">Maybe</option>
+                            <option data-translate="no">No</option>
+                        </select>
+                    </div>
+
+                    <!-- Message -->
+                    <textarea 
+                       placeholder="Write your feedback..."
+                       data-translate="writeFeedback">
+                    </textarea>
+
+                    <button type="submit" data-translate="submitFeedback" aria-label="Submit Feedback">
+                        Submit Feedback
+                    </button>
+                </form>
+
+            </div>
+        </main>
+        <!-- Bottom Navigation -->
+        <nav>
+            <a href="../pages/home.html" class="nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span data-translate="home">
+                    Home
+                </span>
+            </a>
+
+            <a href="favourites.html" class="nav-item">
+                <i class="fa-solid fa-heart"></i>
+                <span data-translate="favourite">
+                    Favourite
+                </span>
+            </a>
+
+            <a href="cart.html" class="nav-item">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span data-translate="cart">
+                    Cart
+                </span>
+            </a>
+
+            <a href="profile.html" class="nav-item active">
+                <i class="fa-solid fa-user"></i>
+                <span data-translate="profile">
+                    Profile
+                </span>
+            </a>
+        </nav>
+    </div>
+
+
+    <!-- Popup -->
+    <div id="popup">
+        <h2 data-translate="thankYou">
+            Thank You ❤️
+        </h2>
+
+        <p data-translate="feedbackSuccess">
+            Your feedback has been submitted successfully.
+        </p>
+
+        <button data-translate="ok">
+            OK
+        </button>
+    </div>
+
+
+    <script src="../js/translations.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/feedback.js"></script>
+
+
+
+
+</body>
+
+</html>

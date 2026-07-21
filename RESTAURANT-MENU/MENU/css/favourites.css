@@ -1,0 +1,300 @@
+body {
+    background: #ececec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+/* Phone */
+
+.phone {
+    width: 375px;
+    min-height: 844px;
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .15);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+
+header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(253, 96, 122);
+    border-bottom: 4px dotted brown;
+}
+
+
+
+/* Main */
+
+main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    padding-bottom: 90px;
+}
+
+
+
+/* Bottom Navigation */
+
+nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #888;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+
+.nav-item i {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+
+.nav-item.active {
+    color: #ff7b00;
+}
+
+/* Hero Banner */
+.favorite-large-hero-card {
+    width: 90%;
+    margin: 10px auto;
+    background: linear-gradient(135deg,#ff9f43,#ff6b35);
+    border-radius: 28px;
+    padding: 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+    box-shadow:0 12px 30px rgba(255,107,53,.3);
+}
+
+.hero-card-details h2 {
+    font-size:26px;
+    font-weight:700;
+    margin-bottom:4px;
+}
+
+.hero-card-details p {
+    font-size:14px;
+    opacity:.9;
+}
+
+.hero-card-badge {
+    display:inline-block;
+    background:rgba(255,255,255,.2);
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.hero-card-graphic-wrapper {
+    width:110px;
+    height:110px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.food-emoji-large {
+    font-size:80px;
+}
+
+/* Favourite Grid */
+.favorites-grid {
+    width:92%;
+    margin:15px auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+/* Favourite Card */
+.favorites-grid-card {
+    background:#ffffff;
+    border-radius:20px;
+    padding:12px;
+    text-align:center;
+    position:relative;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+    animation:fadeIn .3s ease-in-out;
+}
+
+.favorites-grid-card:hover {
+    transform:translateY(-5px);
+}
+
+/* Heart */
+.grid-card-heart {
+    position:absolute;
+    top:10px;
+    right:10px;
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    background:#fff3ef;
+    color:#ff6b35;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.grid-card-heart:hover {
+    background:#ff6b35;
+    color:white;
+}
+
+/* Food Image */
+.grid-card-image-box {
+    width:75px;
+    height:75px;
+    background:#fff5ef;
+    border-radius:50%;
+    margin:8px auto 12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.food-emoji-medium {
+    font-size:40px;
+}
+
+/* Text */
+.grid-card-info h3 {
+    font-size:15px;
+    color:#222;
+    margin-bottom:4px;
+}
+.grid-card-price {
+    font-size:15px;
+    color:#ff6b35;
+    font-weight:700;
+    margin-bottom:12px;
+}
+/* Add Cart Button */
+.add-btn {
+    width:100%;
+    border:none;
+    padding:10px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#ff9f43,#ff6b35);
+    color:white;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.add-btn:hover {
+    transform:scale(1.03);
+}
+/* Empty Favourite */
+.no-favourites {
+    width:100%;
+    min-height:250px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:#fff7f2;
+    border-radius:25px;
+    margin-top:20px;
+    padding:30px;
+}
+
+.no-favourites h3 {
+    font-size:22px;
+    color:#ff6b35;
+    margin-bottom:10px;
+}
+
+.no-favourites p {
+    font-size:14px;
+    color:#777;
+}
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+@media(max-width:420px) {
+
+    body {
+        padding:0;
+    }
+
+    .phone {
+        width:100%;
+        min-height:100vh;
+        border-radius:0;
+    }
+
+    main {
+        padding:15px;
+    }
+
+    .favorite-large-hero-card {
+        flex-direction:column;
+        text-align:center;
+        gap:15px;
+    }
+
+    .favorites-grid {
+        width:100%;
+        grid-template-columns:1fr;
+    }
+}
+.food-image{
+
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    object-fit:cover;
+
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="myProfile">
+        My Profile
+    </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+</head>
+
+<body>
+
+    <div class="phone">
+
+        <main>
+
+            <!-- Header -->
+            <div class="header-row">
+                <header>
+                    <h2 class="section-title" data-translate="myProfile">
+                        My Profile
+                    </h2>
+                </header>
+
+                <!-- Edit Button -->
+                <button id="editProfileBtn" class="btn-search" aria-label="Edit Profile">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+            </div>
+
+            <!-- Profile Card -->
+            <section class="profile-header-card">
+
+                <div class="avatar-wrapper">
+                    <div class="avatar-emoji">
+                        👤
+                    </div>
+                </div>
+
+                <h2 class="user-display-name" data-translate="yourName">
+                    Your Name
+                </h2>
+
+                <p class="user-display-email" data-translate="emailNotAdded">
+                    Email not added
+                </p>
+
+                <p class="user-phone" data-translate="phoneNotAdded">
+                    Phone not added
+                </p>
+
+                <p class="user-address" data-translate="addressNotAdded">
+                    Address not added
+                </p>
+
+            </section>
+
+            <!-- Delivery Address -->
+            <a href="address.html" class="profile-link">
+                <div class="profile-menu-item">
+
+                    <div class="menu-item-left">
+                        <div class="menu-item-icon">📍</div>
+
+                        <div class="menu-item-text">
+                            <h3 data-translate="deliveryAddress">
+                                Delivery Address
+                            </h3>
+
+                            <p data-translate="manageLocations">
+                                Manage your saved locations
+                            </p>
+                        </div>
+                    </div>
+
+                    <i class="fa-solid fa-angle-right menu-item-arrow"></i>
+
+                </div>
+            </a>
+
+            <!-- Payment Methods -->
+            <a href="payment.html" class="profile-link">
+                <div class="profile-menu-item">
+
+                    <div class="menu-item-left">
+                        <div class="menu-item-icon">
+                            💳
+                        </div>
+
+                        <div class="menu-item-text">
+                            <h3 data-translate="paymentMethods">
+                                Payment Methods
+                            </h3>
+
+                            <p data-translate="cardTypes">
+                                Visa, MasterCard, UPI
+                            </p>
+                        </div>
+                    </div>
+
+                    <i class="fa-solid fa-angle-right menu-item-arrow"></i>
+
+                </div>
+            </a>
+
+            <!-- Order History -->
+            <a href="order-history.html" class="profile-menu-item order-history-link">
+
+                <div class="menu-item-left">
+
+                    <div class="menu-item-icon">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+
+                    <div class="menu-item-text">
+                        <h3 data-translate="orderHistory">
+                            Order History
+                        </h3>
+
+                        <p data-translate="viewPreviousOrders">
+                            View your previous orders
+                        </p>
+                    </div>
+
+                </div>
+
+                <i class="fa-solid fa-angle-right menu-item-arrow"></i>
+
+            </a>
+
+            <!-- Logout -->
+            <a href="../index.html" class="logout-btn" data-translate="logout">
+                Log Out
+            </a>
+
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav>
+
+            <a href="../pages/home.html" class="nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span data-translate="home">
+                    Home
+                </span>
+            </a>
+
+            <a href="favourites.html" class="nav-item">
+                <i class="fa-solid fa-heart"></i>
+                <span data-translate="favourite">
+                    Favourite
+                </span>
+            </a>
+
+            <a href="cart.html" class="nav-item">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span data-translate="cart">
+                    Cart
+                </span>
+            </a>
+
+            <a href="profile.html" class="nav-item active">
+                <i class="fa-solid fa-user"></i>
+                <span data-translate="profile">
+                    Profile
+                </span>
+            </a>
+
+        </nav>
+
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div id="profileModal" class="profile-modal">
+
+        <div class="profile-modal-content">
+
+            <span class="close-profile">&times;</span>
+
+            <h2 data-translate="editProfile">
+                Edit Profile
+            </h2>
+
+            <div class="profile-input-group">
+
+                <label data-translate="name">
+                    Name
+                </label>
+
+                <input type="text" id="editName" data-translate="enterName" placeholder="Enter your name">
+
+            </div>
+
+            <div class="profile-input-group">
+
+                <label data-translate="email">
+                    Email
+                </label>
+
+                <input type="email" id="editEmail" data-translate="enterEmail" placeholder="Enter your email">
+
+            </div>
+
+            <div class="profile-input-group">
+
+                <label data-translate="phone">
+                    Phone
+                </label>
+
+                <input type="text" id="editPhone" data-translate="enterPhone" placeholder="Enter phone number">
+
+            </div>
+
+            <div class="profile-input-group">
+
+                <label data-translate="address">
+                    Address
+                </label>
+
+                <textarea id="editAddress" rows="3" data-translate="enterAddress"
+                    placeholder="Enter address"></textarea>
+
+            </div>
+
+            <button id="saveProfile" class="save-profile-btn" data-translate="saveChanges">
+                Save Changes
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="../js/translations.js"></script>
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>
