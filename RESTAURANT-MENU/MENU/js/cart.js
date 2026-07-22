@@ -29,7 +29,26 @@ function saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
 
 }
+function showToast(message) {
+    const toast = document.getElementById("toast");
+    const text = document.getElementById("toastMessage");
 
+    console.log("Toast:", toast);
+    console.log("ToastMessage:", text);
+
+    if (!toast || !text) {
+        console.error("Toast elements not found!");
+        return;
+    }
+
+    text.textContent = message;
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 2000);
+}
 // display
 function displayCart() {
     cartItems.innerHTML = "";
@@ -127,10 +146,10 @@ applyPromo.addEventListener("click", () => {
     const code = promoCode.value.trim().toUpperCase();
     if (code === "SAVE20") {
         promoDiscount = 0.20;
-        alert("🎉 Promo Code Applied!");
+        showToast("🎉 Promo Code Applied!");
     } else {
         promoDiscount = 0;
-        alert("❌ Invalid Promo Code!");
+        showToast("❌ Invalid Promo Code!");
     }
     updateBill();
 });
@@ -139,7 +158,7 @@ applyPromo.addEventListener("click", () => {
 const placeOrder = document.getElementById("placeOrder");
 placeOrder.addEventListener("click", () => {
     if (cart.length === 0) {
-        alert("🛒 Your cart is empty!");
+        showToast("🛒 Your cart is empty!");
         return;
     }
 
@@ -193,23 +212,19 @@ placeOrder.addEventListener("click", () => {
     cart = [];
     saveCart();
     displayCart();
-    alert("🎉 Order Placed Successfully!");
+    showToast("🎉 Order Placed Successfully!");
 
-    let giveFeedback = confirm(
-        "Thank you for your order ❤️\nWould you like to give feedback?"
-    );
+    const modal = document.getElementById("feedbackModal");
 
+    modal.classList.add("show");
 
-    if (giveFeedback) {
+    document.getElementById("goFeedback").onclick = () => {
         window.location.href = "../pages/feedback.html";
-    }
-    else {
+    };
 
-        setTimeout(() => {
-            window.location.href = "order-history.html?feedback=true";
-        }, 500);
-
-    }
+    document.getElementById("skipFeedback").onclick = () => {
+        window.location.href = "order-history.html?feedback=true";
+    };
 
 });
 
