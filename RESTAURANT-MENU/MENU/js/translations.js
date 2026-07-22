@@ -329,7 +329,7 @@ const translations = {
         orderDetails: "ऑर्डर विवरण"
     },
     FR: {
-        restaurantName: "Toasted Tales",
+        restaurantName: "Contes grillés",
         bannerTitle: "MANGEZ COMME UN CHAMPION",
         bannerSubtitle: "Cuisine saine et fraîche",
         starter: "Entrée",
