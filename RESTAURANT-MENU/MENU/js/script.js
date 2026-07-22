@@ -28,7 +28,7 @@ if (cards.length > 0) {
                     card.style.transform = "";
                 }, 150);
 
-                alert(category + " Selected");
+                showToast(category + " Selected")
             }
 
         });
@@ -54,16 +54,20 @@ if (languageSelect) {
 
 //translate page 
 function translatePage(lang) {
+
     if (typeof translations === "undefined") return;
 
     const t = translations[lang];
     if (!t) return;
 
+    // Translate all elements
     document.querySelectorAll("[data-translate]").forEach(element => {
 
         const key = element.dataset.translate;
 
         if (!t[key]) return;
+
+        // Input & textarea placeholder
         if (
             element.tagName === "INPUT" ||
             element.tagName === "TEXTAREA"
@@ -76,25 +80,28 @@ function translatePage(lang) {
             document.title = t[key];
         }
 
-        // Everything else
+        // Option inside select
+        else if (element.tagName === "OPTION") {
+            element.textContent = t[key];
+        }
+
+        // Normal text
         else {
             element.textContent = t[key];
         }
 
     });
 
-    // Save selected language
-    localStorage.setItem("language", lang);
+    // Update all prices
     document.querySelectorAll(".price").forEach(price => {
-
-        let amount = price.dataset.price;
-
+        const amount = price.dataset.price;
         if (amount) {
-            price.innerText = convertPrice(amount);
+            price.textContent = convertPrice(amount);
         }
-
     });
 
+    // Save selected language
+    localStorage.setItem("language", lang);
 }
 
 //banner
@@ -171,7 +178,12 @@ if (saveBtn) {
 
         // Check if required fields are missing
         if (name === "" || email === "" || phone === "" || address === "") {
-            alert("Please fill all fields.");
+
+            const lang = localStorage.getItem("language") || "EN";
+            const t = translations[lang];
+
+            showToast(t.pleaseFillAllFields);
+
             return;
         }
 
@@ -290,4 +302,22 @@ function updatePrices() {
 
     });
 
+}
+// Custom Toast
+function showToast(message) {
+    const toast = document.getElementById("toast");
+    const text = document.getElementById("toastMessage");
+
+    if (!toast || !text) {
+        alert(message); // Fallback if toast doesn't exist
+        return;
+    }
+
+    text.textContent = message;
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 2000);
 }
