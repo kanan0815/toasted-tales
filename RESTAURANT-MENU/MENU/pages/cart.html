@@ -26,6 +26,7 @@
     <script src="../js/cart.js" defer></script>
 
 
+
 </head>
 
 
@@ -339,6 +340,46 @@
 
 
     </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <span id="toastMessage"></span>
+    </div>
+
+    <!-- Feedback Modal -->
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+
+            <i class="fa-solid fa-circle-check modal-icon"></i>
+
+            <h2 data-translate="thankYou">Thank You! ❤️</h2>
+
+            <p>
+                <span data-translate="orderPlaced">
+                    Your order has been placed successfully.
+                </span>
+                <br>
+                <span data-translate="giveFeedbackQuestion">
+                    Would you like to give feedback?
+                </span>
+            </p>
+
+            <div class="modal-buttons">
+
+                <button id="skipFeedback" class="skip-btn" data-translate="noThanks">
+                    No Thanks
+                </button>
+
+                <button id="goFeedback" class="feedback-btn" data-translate="giveFeedback">
+                    Give Feedback
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+
 
 </body>
 
