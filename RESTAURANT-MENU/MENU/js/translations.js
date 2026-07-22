@@ -78,11 +78,20 @@ const translations = {
         total: "Total",
         placeOrder: "Place Order",
 
+
         // Favourite
         yourFavourites: "Your Favourites",
         favouriteFoods: "Favourite Foods",
         favouriteMeals: "Your Favourite Meals ❤️",
         quickAccess: "Quick access to your loved dishes",
+        addedToCart: "added to cart 🛒",
+        addedToFavourite: "Added to favourites ❤️",
+        removedFromFavourite: "Removed from favourites 💔",
+        alreadyFavourite: "is already in favourites ❤️",
+        pleaseFillAllFields: "Please fill all fields.",
+        selected: "Selected",
+        noFavouriteItems: "No Favourite Items",
+        addFavouriteFood: "Add your favourite food from menu",
 
         // Profile
         myProfile: "My Profile",
@@ -138,7 +147,7 @@ const translations = {
         writeFeedback: "Write your feedback...",
         submitFeedback: "Submit Feedback",
         thankYou: "Thank You ❤️",
-        feedbackSubmitted: "Your feedback has been submitted successfully.",
+        feedbackSuccess: "Your feedback has been submitted successfully.",
         excellent: "Excellent",
         good: "Good",
         average: "Average",
@@ -227,12 +236,26 @@ const translations = {
         total: "कुल",
         placeOrder: "ऑर्डर करें",
         couponPlaceholder: "कूपन दर्ज करें",
+        thankYou: "धन्यवाद! ❤️",
+        orderPlaced: "आपका ऑर्डर सफलतापूर्वक दे दिया गया है।",
+        giveFeedbackQuestion: "क्या आप फीडबैक देना चाहेंगे?",
+        noThanks: "नहीं धन्यवाद",
+        giveFeedback: "फीडबैक दें",
 
         /* Favourite */
         yourFavourites: "आपके पसंदीदा",
         favouriteFoods: "पसंदीदा भोजन",
         favouriteMeals: "आपके पसंदीदा व्यंजन ❤️",
         quickAccess: "अपने पसंदीदा व्यंजनों तक तुरंत पहुँच",
+        noFavouriteItems: "कोई पसंदीदा आइटम नहीं",
+        addFavouriteFood: "मेनू से अपना पसंदीदा भोजन जोड़ें",
+        remove: "हटाएँ",
+        addedToCart: "कार्ट में जोड़ा गया 🛒",
+        removedFromFavourites: "पसंदीदा सूची से हटा दिया गया 💔",
+        addedToFavourites: "पसंदीदा सूची में जोड़ा गया ❤️",
+        alreadyInFavourites: "पहले से ही पसंदीदा सूची में है ❤️",
+        pleaseFillAllFields: "कृपया सभी फ़ील्ड भरें।",
+        selected: "चयनित",
 
         /* Profile */
         myProfile: "मेरी प्रोफ़ाइल",
@@ -289,7 +312,7 @@ const translations = {
         visitAgain: "क्या आप फिर आएँगे?",
         submitFeedback: "प्रतिक्रिया भेजें",
         thankYou: "धन्यवाद ❤️",
-        feedbackSubmitted: "आपकी प्रतिक्रिया सफलतापूर्वक भेज दी गई है।",
+        feedbackSuccess: "आपकी प्रतिक्रिया सफलतापूर्वक भेज दी गई है।",
         excellent: "उत्कृष्ट",
         good: "अच्छा",
         average: "औसत",
@@ -323,7 +346,6 @@ const translations = {
         yes: "Oui",
         no: "Non",
         maybe: "Peut-être",
-        ok: "OK",
 
         /* Starter */
         starterMenu: "Menu des Entrées",
@@ -380,12 +402,25 @@ const translations = {
         total: "Total",
         placeOrder: "Passer la commande",
         couponPlaceholder: "Entrez le coupon",
+        thankYou: "Merci ! ❤️",
+        orderPlaced: "Votre commande a été passée avec succès.",
+        giveFeedbackQuestion: "Voulez-vous donner votre avis ?",
+        noThanks: "Non merci",
+        giveFeedback: "Donner un avis",
 
         /* Favourite */
         yourFavourites: "Vos favoris",
         favouriteFoods: "Plats favoris",
         favouriteMeals: "Vos plats préférés ❤️",
         quickAccess: "Accès rapide à vos plats préférés",
+        addedToCart: "ajouté au panier 🛒",
+        addedToFavourite: "Ajouté aux favoris ❤️",
+        removedFromFavourite: "Retiré des favoris 💔",
+        alreadyFavourite: "est déjà dans les favoris ❤️",
+        pleaseFillAllFields: "Veuillez remplir tous les champs.",
+        selected: "Sélectionné",
+        noFavouriteItems: "Aucun favori",
+        addFavouriteFood: "Ajoutez vos plats préférés depuis le menu",
 
         /* Profile */
         myProfile: "Mon profil",
@@ -439,7 +474,7 @@ const translations = {
         visitAgain: "Reviendrez-vous ?",
         submitFeedback: "Envoyer",
         thankYou: "Merci ❤️",
-        feedbackSubmitted: "Vos commentaires ont été envoyés avec succès.",
+        feedbackSuccess: "Vos commentaires ont été envoyés avec succès.",
         excellent: "Excellent",
         good: "Bon",
         average: "Moyen",
@@ -532,12 +567,26 @@ const translations = {
         total: "총합",
         placeOrder: "주문하기",
         couponPlaceholder: "쿠폰 입력",
+        thankYou: "감사합니다! ❤️",
+        orderPlaced: "주문이 성공적으로 완료되었습니다.",
+        giveFeedbackQuestion: "피드백을 남기시겠습니까?",
+        noThanks: "괜찮습니다",
+        giveFeedback: "피드백 남기기",
+
 
         /* Favourite */
         yourFavourites: "내 즐겨찾기",
         favouriteFoods: "좋아하는 음식",
         favouriteMeals: "내가 좋아하는 음식 ❤️",
         quickAccess: "좋아하는 음식에 빠르게 접근",
+        addedToCart: "장바구니에 추가되었습니다 🛒",
+        addedToFavourite: "즐겨찾기에 추가되었습니다 ❤️",
+        removedFromFavourite: "즐겨찾기에서 삭제되었습니다 💔",
+        alreadyFavourite: "이미 즐겨찾기에 있습니다 ❤️",
+        pleaseFillAllFields: "모든 항목을 입력해주세요.",
+        selected: "선택되었습니다",
+        noFavouriteItems: "즐겨찾기 항목이 없습니다",
+        addFavouriteFood: "메뉴에서 좋아하는 음식을 추가하세요",
 
         /* Profile */
         myProfile: "내 프로필",
@@ -591,7 +640,7 @@ const translations = {
         visitAgain: "다시 방문하시겠습니까?",
         submitFeedback: "피드백 제출",
         thankYou: "감사합니다 ❤️",
-        feedbackSubmitted: "피드백이 성공적으로 제출되었습니다.",
+        feedbackSuccess: "피드백이 성공적으로 제출되었습니다.",
         excellent: "매우 좋음",
         good: "좋음",
         average: "보통",
