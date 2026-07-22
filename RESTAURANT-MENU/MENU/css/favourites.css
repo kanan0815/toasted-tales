@@ -298,3 +298,93 @@ nav {
     object-fit:cover;
 
 }
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%) translateY(100px);
+
+    background: #ff8a65;
+    color: white;
+
+    padding: 14px 26px;
+    border-radius: 30px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    z-index: 9999;
+
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.fav-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.add-btn,
+.remove-btn {
+    flex: 1;
+    height: 45px;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-btn {
+    background: #ff8a3d;
+    color: white;
+}
+
+.remove-btn {
+    background: #ff4f73;
+    color: white;
+}
+.no-favourites{
+    width:100%;
+    min-height:55vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:#fff7f3;
+    border-radius:25px;
+    padding:40px 25px;
+    margin:20px auto;
+}
+
+.no-favourites i{
+    font-size:60px;
+    color:#ff5b7f;
+    margin-bottom:20px;
+}
+
+.no-favourites h3{
+    font-size:30px;
+    font-weight:700;
+    color:#ff6b35;
+    margin-bottom:12px;
+}
+
+.no-favourites p{
+    font-size:18px;
+    color:#666;
+    max-width:260px;
+    line-height:1.6;
+}
