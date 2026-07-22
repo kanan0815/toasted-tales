@@ -22,5 +22,8 @@ function addCart(name, price, image) {
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    alert(name + " added to cart!");
+    const lang = localStorage.getItem("language") || "EN";
+    const t = translations[lang];
+
+    showToast((t[name] || name) + " " + t.addedToCart);
 }
