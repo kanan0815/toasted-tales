@@ -1,152 +1,153 @@
 console.log("Favourite JS loaded");
 
+// ADD TO FAVOURITES
 function addFavourite(name, price, image) {
-    let favourites = JSON.parse(
-        localStorage.getItem("favourites")
-    ) || [];
 
-    let alreadyExists = favourites.some(
-        item => item.name === name
-    );
+    let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
 
-    if (alreadyExists) {
-        alert(name + " already in favourites ❤️");
+    const lang = localStorage.getItem("language") || "EN";
+    const t = translations[lang];
+
+    if (favourites.some(item => item.name === name)) {
+        showToast((t[name] || name) + " " + t.alreadyFavourite);
         return;
     }
 
     favourites.push({
-        name: name,
-        price: price,
+        name,
+        price,
         image: new URL(image, window.location.href).href
     });
 
-    localStorage.setItem(
-        "favourites",
-        JSON.stringify(favourites)
-    );
-    alert(name + " added to favourites ❤️");
+    localStorage.setItem("favourites", JSON.stringify(favourites));
 
+    showToast("❤️ " + t.addedToFavourite);
 }
-// DISPLAY FAVOURITE PAGE ITEMS
+
+
+// DISPLAY FAVOURITES
 document.addEventListener("DOMContentLoaded", () => {
 
-    let container = document.getElementById("favoritesContainer");
-
-    // only run on favourite page
+    const container = document.getElementById("favoritesContainer");
 
     if (!container) return;
-    let favourites = JSON.parse(
-        localStorage.getItem("favourites")
-    ) || [];
 
-    if (favourites.length === 0) {
-        container.innerHTML = `
-        <div class="no-favourites">
-            <h3>❤️ No Favourite Items</h3>
-            <p>Add your favourite food from menu</p>
-        </div>
-        `;
+    let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
 
-        return;
-
-    }
     const lang = localStorage.getItem("language") || "EN";
     const t = translations[lang];
 
-    favourites.forEach((item) => {
+    function renderFavourites() {
 
-        const displayName = t[item.name] || item.name;
+        container.innerHTML = "";
 
-        let card = document.createElement("div");
-        card.classList.add("favorites-grid-card");
+        if (favourites.length === 0) {
 
-        card.innerHTML = `
-        <div class="grid-card-heart">
-            <i class="fa-solid fa-heart"></i>
-        </div>
+            container.innerHTML = `
+            <div class="no-favourites">
+                <i class="fa-solid fa-heart-crack"></i>
 
-        <div class="grid-card-image-box">
-            <img src="${item.image}" class="food-image">
-        </div>
+                <h3 data-translate="noFavouriteItems">
+                    No Favourite Items
+                </h3>
 
-        <div class="grid-card-info">
-            <h3>${displayName}</h3>
+                <p data-translate="addFavouriteFood">
+                    Add your favourite food from menu
+                </p>
+            </div>
+            `;
 
-            <p class="grid-card-price">
-                ${convertPrice(item.price)}
-            </p>
+            translatePage(lang);
+            return;
+        }
 
-            <button class="add-btn" data-translate="add">
-                ${t.add}
-            </button>
-        </div>
-    `;
+        favourites.forEach(item => {
 
-        container.appendChild(card);
+            const displayName = t[item.name] || item.name;
 
-    });
+            const card = document.createElement("div");
+            card.className = "favorites-grid-card";
 
-    // ADD TO CART FROM FAVOURITE PAGE
-    let favouriteButtons = document.querySelectorAll(".add-btn");
+            card.innerHTML = `
+                <div class="grid-card-heart">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
 
-    let cartData = JSON.parse(
-        localStorage.getItem("cart")
-    ) || [];
+                <div class="grid-card-image-box">
+                    <img src="${item.image}" class="food-image">
+                </div>
 
-    favouriteButtons.forEach((button) => {
+                <div class="grid-card-info">
 
-        button.addEventListener("click", () => {
+                    <h3>${displayName}</h3>
 
-            let card = button.closest(".favorites-grid-card");
+                    <p class="grid-card-price">
+                        ${convertPrice(item.price)}
+                    </p>
 
-            let displayName = card.querySelector("h3").innerText;
+                    <div class="fav-buttons">
 
-            let price = Number(
-                card.querySelector(".grid-card-price")
-                    .innerText
-                    .replace("₹", "")
-            );
+                        <button class="add-btn">
+                            ${t.add}
+                        </button>
 
-            let foodImage = card.querySelector(".food-image").src;
+                        <button class="remove-btn">
+                            Remove
+                        </button>
 
-            // Get original translation key
-            let originalItem = favourites.find(
-                f => (t[f.name] || f.name) === displayName
-            );
+                    </div>
 
-            let foodKey = originalItem ? originalItem.name : displayName;
+                </div>
+            `;
 
-            let existingFood = cartData.find(
-                item => item.name === foodKey
-            );
+            // ADD TO CART
+            card.querySelector(".add-btn").addEventListener("click", () => {
 
-            if (existingFood) {
-                existingFood.quantity += 1;
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-                if (!existingFood.image) {
-                    existingFood.image = foodImage;
+                let existing = cart.find(c => c.name === item.name);
+
+                if (existing) {
+                    existing.quantity++;
+                } else {
+                    cart.push({
+                        id: Date.now(),
+                        name: item.name,
+                        price: item.price,
+                        quantity: 1,
+                        image: item.image
+                    });
                 }
 
-            } else {
+                localStorage.setItem("cart", JSON.stringify(cart));
 
-                cartData.push({
-                    id: Date.now(),
-                    name: foodKey,
-                    price: price,
-                    quantity: 1,
-                    image: foodImage
-                });
+                showToast((t[item.name] || item.name) + " " + t.addedToCart);
 
-            }
+            });
 
-            localStorage.setItem(
-                "cart",
-                JSON.stringify(cartData)
-            );
 
-            alert((t[foodKey] || foodKey) + " added to cart 🛒");
+            // REMOVE
+            card.querySelector(".remove-btn").addEventListener("click", () => {
+
+                favourites = favourites.filter(f => f.name !== item.name);
+
+                localStorage.setItem(
+                    "favourites",
+                    JSON.stringify(favourites)
+                );
+
+                showToast("💔 " + t.removedFromFavourite);
+
+                renderFavourites();
+
+            });
+
+            container.appendChild(card);
+
         });
 
-    });
+    }
+
+    renderFavourites();
 
 });
